@@ -6,89 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity" >
 
-    <Button
-        android:id="@+id/bt_swimzone"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginEnd="3dp"
-        android:layout_marginRight="3dp"
-        android:text="swim"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/bt_cafe"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/bt_cafe"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="cafe"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/bt_camera"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="3dp"
-        android:layout_marginLeft="3dp"
-        android:layout_marginEnd="50dp"
-        android:layout_marginRight="50dp"
-        android:text="camera"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/bt_cafe" />
-
-    <Button
-        android:id="@+id/bt_walk"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="5dp"
-        android:text="walking"
-        app:layout_constraintBottom_toTopOf="@+id/bt_swimzone"
-        app:layout_constraintEnd_toEndOf="@+id/bt_swimzone"
-        app:layout_constraintStart_toStartOf="@+id/bt_swimzone" />
-
-    <Button
-        android:id="@+id/bt_catzone"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="5dp"
-        android:text="catzone"
-        app:layout_constraintBottom_toTopOf="@+id/bt_cafe"
-        app:layout_constraintEnd_toEndOf="@+id/bt_cafe"
-        app:layout_constraintStart_toStartOf="@+id/bt_cafe" />
-
-    <Button
-        android:id="@+id/bt_playground"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="5dp"
-        android:text="playing"
-        app:layout_constraintBottom_toTopOf="@+id/bt_camera"
-        app:layout_constraintEnd_toEndOf="@+id/bt_camera"
-        app:layout_constraintStart_toStartOf="@+id/bt_camera" />
-
-    <ImageButton
-        android:id="@+id/ib_swimzone"
-        android:layout_width="113dp"
-        android:layout_height="107dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="100dp"
-        android:layout_marginRight="100dp"
-        android:layout_marginBottom="150dp"
-        android:src="@drawable/ic_swim"
-        app:layout_constraintBottom_toTopOf="@+id/bt_walk"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.177"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="0.108" />
-
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="0dp"
@@ -113,58 +30,45 @@
             android:textSize="20sp" />
     </LinearLayout>
 
-    <ImageButton
-        android:id="@+id/ib_cafe"
-        android:layout_width="114dp"
-        android:layout_height="106dp"
-        android:layout_marginStart="100dp"
-        android:layout_marginLeft="100dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="5dp"
-        android:layout_marginRight="5dp"
-        android:layout_marginBottom="150dp"
-        android:src="@drawable/ic_cafe1"
-        app:layout_constraintBottom_toTopOf="@+id/bt_playground"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.766"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="0.107" />
+    <FrameLayout
+        android:id="@+id/frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
-    <ImageButton
-        android:id="@+id/ib_catzone"
-        android:layout_width="141dp"
-        android:layout_height="130dp"
-        android:src="@drawable/ic_catzone"
-        app:layout_constraintBottom_toTopOf="@+id/bt_catzone"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.477"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="0.436" />
 
-    <ImageButton
-        android:id="@+id/ib_walk"
-        android:layout_width="137dp"
-        android:layout_height="132dp"
-        android:src="@drawable/ic_road"
-        app:layout_constraintBottom_toTopOf="@+id/bt_catzone"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.142"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="0.817" />
+    </FrameLayout>
 
-    <ImageButton
-        android:id="@+id/ib_playground"
-        android:layout_width="112dp"
-        android:layout_height="116dp"
-        android:src="@drawable/ic_play"
-        app:layout_constraintBottom_toTopOf="@+id/bt_playground"
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.782"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="0.824" />
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/bt_home"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="home"></Button>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </LinearLayout>
+        <Button
+            android:id="@+id/bt_camera"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="camera">
+
+        </Button>
+
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
