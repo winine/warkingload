@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+    <Button
+        android:id="@+id/bt_swimzone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginRight="3dp"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/bt_cafe"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/bt_cafe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/bt_camera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginRight="50dp"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/bt_cafe" />
+
+    <Button
+        android:id="@+id/bt_wark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:text="Button"
+        app:layout_constraintBottom_toTopOf="@+id/bt_swimzone"
+        app:layout_constraintEnd_toEndOf="@+id/bt_swimzone"
+        app:layout_constraintStart_toStartOf="@+id/bt_swimzone" />
+
+    <Button
+        android:id="@+id/bt_catzone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:text="Button"
+        app:layout_constraintBottom_toTopOf="@+id/bt_cafe"
+        app:layout_constraintEnd_toEndOf="@+id/bt_cafe"
+        app:layout_constraintStart_toStartOf="@+id/bt_cafe" />
+
+    <Button
+        android:id="@+id/bt_playground"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:text="Button"
+        app:layout_constraintBottom_toTopOf="@+id/bt_camera"
+        app:layout_constraintEnd_toEndOf="@+id/bt_camera"
+        app:layout_constraintStart_toStartOf="@+id/bt_camera" />
+
+    <ImageButton
+        android:id="@+id/ib_swimzone"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginRight="100dp"
+        android:layout_marginBottom="150dp"
+        app:layout_constraintBottom_toTopOf="@+id/bt_wark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.177"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.108"
+        tools:srcCompat="@drawable/fallbow" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_english"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            tools:text="Touch Image zone" />
+
+        <TextView
+            android:id="@+id/tv_korean"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textSize="20sp"
+            tools:text="원하는 그림을 선택해주세요" />
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/ib_cafe"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="150dp"
+        app:layout_constraintBottom_toTopOf="@+id/bt_playground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.766"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.107"
+        tools:srcCompat="@tools:sample/backgrounds/scenic[19]" />
+
+    <ImageButton
+        android:id="@+id/ib_catzone"
+        android:layout_width="85dp"
+        android:layout_height="96dp"
+        app:layout_constraintBottom_toTopOf="@+id/bt_catzone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.429"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.341"
+        tools:srcCompat="@tools:sample/avatars[3]" />
+
+    <ImageButton
+        android:id="@+id/ib_wark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/bt_catzone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.115"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.735"
+        tools:srcCompat="@tools:sample/avatars[2]" />
+
+    <ImageButton
+        android:id="@+id/ib_playground"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/bt_playground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.868"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.848"
+        tools:srcCompat="@tools:sample/avatars[5]" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
