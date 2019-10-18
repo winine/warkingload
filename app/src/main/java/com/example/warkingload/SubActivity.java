@@ -45,8 +45,6 @@ public class SubActivity extends AppCompatActivity implements OnMapReadyCallback
         bthome = (Button)findViewById(R.id.bt_home);
         btcamera = (Button)findViewById(R.id.bt_camera);
 
-
-
         btswim.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -118,8 +116,7 @@ public class SubActivity extends AppCompatActivity implements OnMapReadyCallback
         markerOptions.snippet("학교");
         markerOptions.position(location);
         googleMap.addMarker(markerOptions);
-
-        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(location, 16));
+        
 
     }
 
