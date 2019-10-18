@@ -116,7 +116,7 @@ public class SubActivity extends AppCompatActivity implements OnMapReadyCallback
         markerOptions.snippet("학교");
         markerOptions.position(location);
         googleMap.addMarker(markerOptions);
-        
+
 
     }
 
